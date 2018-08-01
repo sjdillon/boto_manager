@@ -1,0 +1,8 @@
+*.pyc
+*.idea/*
+.idea/
+*.log
+lambda_package.zip
+.cache/
+__pycache__/
+.pytest_cache
