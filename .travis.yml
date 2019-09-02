@@ -1,12 +1,7 @@
 language: python
 python:
-  - "2.7"
-before_script:
-  - export PYTHONPATH=$PYTHONPATH:$(pwd)
+  - "3.7"
 install:
-  - pip install -r requirements.txt
+  - pip install tox
 script:
-  - py.test -sv 
-
-
- 
+  - tox
