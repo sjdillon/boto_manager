@@ -12,7 +12,7 @@ install boto_manager
 
 
 ```python
-!pip install git+https://github.com/sjdillon/boto_manager | tail -n 1
+$ pip install git+https://github.com/sjdillon/boto_manager | tail -n 1
 ```
 
       Running command git clone -q https://github.com/sjdillon/boto_manager /tmp/pip-req-build-o8i52ub4
@@ -38,7 +38,7 @@ create a folder to store mock files
 
 
 ```python
-!mkdir mock_data/
+$ mkdir mock_data/
 ```
 
 record: save boto call response to mock file
@@ -78,7 +78,7 @@ assert 'Subscriptions' in result
 
     2019-09-01 21:07:50,921 - 140671852791616 - INFO - recording boto to /home/sjdillon/jupyter/mock_data
     2019-09-01 21:07:50,924 - 140671852791616 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
-    2019-09-01 21:07:51,419 - 140671852791616 - INFO - result: {'Subscriptions': [{'SubscriptionArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-sns-pipeline-approve:590ffd51-5ff2-415c-825b-d144bcdafcc6', 'Owner': '000000000000', 'Protocol': 'email', 'Endpoint': 'sjdillon.dillon.com', 'TopicArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-sns-pipeline-approve'}, {'SubscriptionArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-deploy-events:77b3e8d6-e7dd-4243-b6fd-f51defa71e8d', 'Owner': '000000000000', 'Protocol': 'email', 'Endpoint': 'sjdillon.dillon.com', 'TopicArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-deploy-events'}], 'NextToken': 'AAGoclrsijma6fqTf/zmfTYNc++0cggCxdo/nm2QK6c7KQ==', 'ResponseMetadata': {'RequestId': 'b19aad38-be9e-504b-ada6-f8ded33939b8', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'b19aad38-be9e-504b-ada6-f8ded33939b8', 'content-type': 'text/xml', 'content-length': '1173', 'date': 'Mon, 02 Sep 2019 01:07:50 GMT'}, 'RetryAttempts': 0}}
+    2019-09-01 21:07:51,419 - 140671852791616 - INFO - result: {'Subscriptions': [{'SubscriptionArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-sns-pipeline-approve:590ffd51-5ff2-415c-825b-d144bcdafcc6', 'Owner': '000000000000', 'Protocol': 'email', 'Endpoint': 'sjdillon.com', 'TopicArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-sns-pipeline-approve'}, {'SubscriptionArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-deploy-events:77b3e8d6-e7dd-4243-b6fd-f51defa71e8d', 'Owner': '000000000000', 'Protocol': 'email', 'Endpoint': 'sjdillon.com', 'TopicArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-deploy-events'}], 'NextToken': 'AAGoclrsijma6fqTf/zmfTYNc++0cggCxdo/nm2QK6c7KQ==', 'ResponseMetadata': {'RequestId': 'b19aad38-be9e-504b-ada6-f8ded33939b8', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'b19aad38-be9e-504b-ada6-f8ded33939b8', 'content-type': 'text/xml', 'content-length': '1173', 'date': 'Mon, 02 Sep 2019 01:07:50 GMT'}, 'RetryAttempts': 0}}
 
 
 confirm: check that a mock file was created
@@ -116,4 +116,4 @@ assert 'Subscriptions' in result
 
     2019-09-01 20:30:31,518 - 140671852791616 - INFO - playing back mock boto calls from /home/sjdillon/jupyter/mock_data
     2019-09-01 20:30:31,531 - 140671852791616 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
-    2019-09-01 20:30:31,589 - 140671852791616 - INFO - result: {'Subscriptions': [{'SubscriptionArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-sns-pipeline-approve:590ffd51-5ff2-415c-825b-d144bcdafcc6', 'Owner': '000000000000', 'Protocol': 'email', 'Endpoint': 'sjdillon.dillon.com', 'TopicArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-sns-pipeline-approve'}, {'SubscriptionArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-deploy-events:77b3e8d6-e7dd-4243-b6fd-f51defa71e8d', 'Owner': '000000000000', 'Protocol': 'email', 'Endpoint': 'sjdillon.dillon.com', 'TopicArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-deploy-events'}], 'NextToken': 'AAHoZj78oUtiutI0qTxPoubt0a25vsa5vgdOyqsWkuCunA==', 'ResponseMetadata': {'RequestId': 'ded87dae-c1e3-5739-88c6-2848f9d246d4', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'ded87dae-c1e3-5739-88c6-2848f9d246d4', 'content-type': 'text/xml', 'content-length': '1173', 'date': 'Sun, 01 Sep 2019 21:19:45 GMT'}, 'RetryAttempts': 0}}
+    2019-09-01 20:30:31,589 - 140671852791616 - INFO - result: {'Subscriptions': [{'SubscriptionArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-sns-pipeline-approve:590ffd51-5ff2-415c-825b-d144bcdafcc6', 'Owner': '000000000000', 'Protocol': 'email', 'Endpoint': 'sjdillon.com', 'TopicArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-sns-pipeline-approve'}, {'SubscriptionArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-deploy-events:77b3e8d6-e7dd-4243-b6fd-f51defa71e8d', 'Owner': '000000000000', 'Protocol': 'email', 'Endpoint': 'sjdillon.com', 'TopicArn': 'arn:aws:sns:us-west-2:000000000000:sjd-demo-dev-deploy-events'}], 'NextToken': 'AAHoZj78oUtiutI0qTxPoubt0a25vsa5vgdOyqsWkuCunA==', 'ResponseMetadata': {'RequestId': 'ded87dae-c1e3-5739-88c6-2848f9d246d4', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'ded87dae-c1e3-5739-88c6-2848f9d246d4', 'content-type': 'text/xml', 'content-length': '1173', 'date': 'Sun, 01 Sep 2019 21:19:45 GMT'}, 'RetryAttempts': 0}}
